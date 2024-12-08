@@ -1,0 +1,54 @@
+<!--/*the external cascading stylesheet*/
+/*Author: Dory Gillikin*/
+/*Date Created: 12/1/201*/
+/*Sanctuary is a non-profit farm sanctuary.
+	Our mission is to rescue and care for animals
+	that have been abandoned, abused 
+	or born in the wilderness.*/-->
+
+  .box-sizing: border-box;{
+}
+body {
+	 font-family: Arial, Helvetica, sans-serif;
+	 background: url('birdBack.jpg');
+	 background-repeat: repeat;
+	 background-size: cover;
+	 opacity: .9;	 
+}
+h1 {
+	font-family: Papyrus, fantasy;
+	font-size: 2em;
+    text-shadow: 1px #483D8B;
+}
+h2	{
+	font-family: Papyrus, fantasy;
+	font-size: 1.5em;
+	text-shadow: 1px #483D8B;
+	color: #BDB76B;
+	margin-left: 10%;
+}
+ul {
+	font-family:Papyrus;
+    list-style: none;     
+	text-shadow: 1.3px 1.3px 1.3px #483D8B; 
+	
+	opacity: 1;	   
+}
+ul li {		      
+      line-height: 30px;
+      text-align: center;	  
+      font-size: 1.5em;	
+}
+ul li a {
+	  text-decoration: none; 	  		
+}
+
+#signup {
+		text-align: left;
+	
+}
+p {
+	font-size: 1em;
+	line-height: 2em;
+	margin-left: 10%;
+}
