@@ -1,0 +1,1238 @@
+<DOCTYPE html>
+<!--Author: Dory Gillikin-->
+	<!--Date Created: 12/1/201-->
+<!-- Kin Sanctuary is a non-profit farm sanctuary.
+	Our mission is to rescue and care for animals
+	that have been abandoned, abused 
+	or orphaned.-->
+
+<meta charset="utf-8" />
+<html lang="en">
+<title>project2</title>
+<html>
+	<head>
+		<link rel="stylesheet" href="project2b.min.css"/>
+		<link rel="stylesheet" href="jquery.mobile.icons.min.css"/>
+
+		<link rel="stylesheet" href="jquery.min.css"/>
+		<!--<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css"/>-->
+
+		
+		<!--<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>-->
+		<script src="jQuery.min2.js"></script>
+
+
+		<!--<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>-->
+		<script src="5.min.js"></script>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>		
+<!--favicon-->
+		<link rel="icon" type="image/png" href="favicon.ico">
+
+	
+ <!--external style sheet-->	
+		<link href="styleSheet.css" rel="styleSheet">
+
+
+<style>
+img.fullscreen {
+     max-height: 100%;
+     max-width: 100%; 
+}	 	 
+.ui-icon-myicon:after {
+	 background-image:url("../assets/img/glyphish-icons.png");
+	 background-size:18px 18px;
+}	
+.ui-btn.my-tooltip-btn,
+.ui-btn.my-tooltip-btn:hover,
+.ui-btn.my-tooltip-btn:active {
+    background: #D4AF37;
+	border: 1px solid #2E8B57;
+	border-radius: 150px;
+}
+.dropbtn {
+  background-color: #3498DB;
+  color: green;
+  padding: 10px;
+  font-size: 16px;
+  border: .2px solid #BDB76B; border-radius: 5px;
+  cursor: pointer;
+}
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #008080;
+  border: .2px solid #BDB76B; border-radius: 5px;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropdown-content {
+  display: none;
+  position: relative;
+  background-color: #008080;
+  min-width: 160px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 7;
+}
+.dropdown-content a {
+  color: #BDB76B;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+.dropdown a:hover {
+   background-color: #5F9EA0;
+}
+.show {
+	display: block;
+}
+</style>
+	</head>
+		<!--Beginning of first page-->
+		
+			<body>
+			<div data-role="page" id="index" data-theme="d">
+		
+		<!--fixed header with nav-->		
+			<header data-role="header" data-position="fixed">
+			<h1 style="font-size: 1em;">Kin Sanctuary</h1>
+<nav data-role="navbar">
+	<ul>
+		<li><a href="#index" data-icon="home">Home</a></li>
+		<li><a href="#about" data-icon="heart">About Us</a></li>			
+		<li><a href="#visit" data-icon="location">Visit</a></li>
+<li><a href="https://doryjoy.org/" data-icon="home">Return to Portfolio</a></li>
+
+	</ul>
+		</nav>			
+		    </header>
+			
+		<!--listview & data filter-->
+<article data-role="content">
+	<ul data-role="listview" data-filter="true">
+		<li>
+		<a href="#animals" data-transition="slide">
+	<h1>Our Animals</h1>
+		<img src="farmScene1.jpg" alt="On the Farm" 
+		style="width: 170px; height: 110px; margin-left: -50px; 
+		border: 2px solid #808080; border-radius: 15px;"/>		
+	<p>Happy &amp Carefree</p></a>
+		</li>
+
+		<li>
+		<a href="#getInvolved" data-transition="slide">
+	<h1>Get Involved</h1>
+		<img src="chickNhand2.jpg" alt="Get Involved" 
+		style="width: 170px; height: 110px; margin-left: -50px; 
+		border: 2px solid #808080; border-radius: 15px;"/>		
+	<p>Many Thanks to You</p></a>
+		</li>
+
+		<li>
+		<a href="#gallery" data-transition="slide">
+	<h1>Gallery</h1>
+		<img src="billiekids3.jpg" alt="Gallery" 
+		style="width: 170px; height: 110px; margin-left: -50px; 
+		border: 2px solid #808080; border-radius: 15px;"/>		
+	<p>Our Farm Family</p></a>
+		</li>
+	</ul>
+</article>
+			<!--fixed footer with tool-tip and auto update-->
+<footer data-role="footer" style="text-align: center"; data-position="fixed">
+	<p style="font-size: .6em;">Copyright &copy; 2024 D.Gillikin
+	<a href="#popupInfo10" data-rel="popup" data-transition="pop" 
+	   class="my-tooltip-btn ui-btn ui-alt-icon ui-nodisc-icon ui-btn-inline ui-icon-info ui-btn-icon-notext" 
+	   title="Learn more">Learn more</a></p>
+<div data-role="popup" id="popupInfo10" class="ui-content" data-theme="a" 
+	   style="max-width:350px; font-size: .7em;">
+<script language="Javascript">
+	document.write("This page was last modified on: " + document.lastModified +"");
+</script><br>
+	 <a href="mailto:1doryjoy@gmail.com">1doryjoy@gmail.com</a>
+</footer>
+	</div>
+		</div>		
+			</body>
+			
+		<!--end of first page-->
+		<!--beginning of second page-->	
+
+		<body>		
+		<div data-role="page" id="about" data-theme="d">
+	
+		<!--fixed header with nav-->
+	<header data-role="header" data-position="fixed">
+			<h1 style="font-size: 1em;">Kin Sanctuary</h1>
+<nav data-role="navbar">
+	<ul>
+		<li><a href="#index" data-icon="home">Home</a></li>
+		<li><a href="#about" data-icon="heart">About Us</a></li>			
+		<li><a href="#visit" data-icon="location">Visit</a></li>
+<li><a href="https://doryjoy.org/" data-icon="home">Return to Portfolio</a></li>
+	</ul>
+		</nav>
+            </header>		
+				 
+	<h2 style="border: 2px solid #5F9EA0; border-radius: 15px; font-size: 1.2em;		
+			   padding: .2em; box-shadow: 2px 2px 2px #4682B4; margin-right: 5%; margin-left: 1%;      		
+			   text-align: center; background-image: linear-gradient(to left, #EEE8AA, #008080)";>
+										  Become a Member<br>
+										  Membership is Free</h2> 
+	<small><p style="line-height: 2em"><p>We rescue animals who have been <br>
+										  abandoned, abused or orphaned.<br>
+										  We care for our rescues for life.</p>
+									   <p>As well as our monthly online <br>
+		                                  newsletter, members receive special <br> 
+										  offers and discounts on our products 
+										  and tours.</p></small>
+											
+<!--Themed form elements nested in collapsible-->
+<div data-role="collapsible">
+		<h2 style="background-image: linear-gradient(to left, #EEE8AA, #008080);	
+				    width: 95%;border: 1px solid green; border-radius: 12px; 
+				    padding: .3em; box-shadow: 2px 2px 2px #4682B4;">Sign Up</h2>
+			  		
+	<form method="post" action="https://webdevbasics.net/scripts/demo.php">
+
+	<fieldset style="background-image: linear-gradient(to left, #EEE8AA, #008080);  margin-left: 5%;
+					width: 85%;border: 1px solid #5F9EA0; border-radius: 12px; padding: .2em;">					 	
+		<label for="firstname">First Name:</label>
+		<input type="text" name="First Name" id="firstname"
+		  required="required" placeholder="first name">
+		<label for="lastname">Last Name:</label>		
+		<input type="text" name="lastname" id="lastname"
+		   required="required" placeholder="last name">
+		<label for="myEmail">E-mail:</label>
+		<input type="email" name="myEmail" id="myEmail"
+		   required="required" placeholder="you@yourdomain.com">
+	</fieldset>
+	<fieldset style="background-image: linear-gradient(to left, #EEE8AA, #008080);  margin-left: 20%;
+					width: 55%;border: 1px solid #5F9EA0; border-radius: 12px;">
+		 <input id="mySubmit" type="submit" value="Submit">
+		<button type="reset" value="Reset">Reset</button>
+	</fieldset>
+	</form>
+	</div>										
+
+	<div data-role="collapsible" data-collapsed-icon="carat-d" data-expanded-icon="carat-u">
+		<h4>More Links</h4>
+		<ul data-role="listview" data-inset="false">
+			<li><a href="#education" data-icon="home">Education</a></li>
+			<li><a href="#sponsor" data-icon="heart">Sponsorship</a></li>			
+			<li><a href="#volunteer" data-icon="location">Volunteer</a></li>
+			<li><a href="#aviary" data-icon="location">Aviary</a></li>
+		</ul>
+	</div>					
+		
+			<!--fixed footer with tool-tip and auto update-->
+<footer data-role="footer" style="text-align: center"; data-position="fixed">
+	<p style="font-size: .6em;">Copyright &copy; 2024 D.Gillikin
+	<a href="#popupInfo2" data-rel="popup" data-transition="pop" 	
+	   class="my-tooltip-btn ui-btn ui-alt-icon ui-nodisc-icon ui-btn-inline ui-icon-info ui-btn-icon-notext" 
+	   title="Learn more">Learn more</a></p>
+<div data-role="popup" id="popupInfo2" class="ui-content" data-theme="a" 
+	   style="max-width:350px; font-size: .7em;">
+<script language="Javascript">
+	document.write("This page was last modified on: " + document.lastModified +"");
+</script><br>
+	 <a href="mailto:1doryjoy@gmail.com">1doryjoy@gmail.com</a>
+</footer>
+	</div>
+		</div>
+			</body>
+						
+		<!--end of second page-->
+		<!--beginning of third page-->
+				
+		<head>
+<script language="javascript" src="cal2.js">
+/*
+Xin's Popup calendar script-  Xin Yang (http://www.yxscripts.com/)
+Script featured on/available at http://www.dynamicdrive.com/
+This notice must stay intact for use
+*/
+</script>
+<script language="javascript" src="calconf2.js"></script>
+
+<style>
+@media screen and (max-width: 400px) {
+	#simplegallery{
+		width: 100% !important;
+		height: 250px !important;
+	}
+}
+</style>
+		</head>		
+			<body>
+			<div data-role="page" id="visit" data-theme="d">
+		
+			<!--fixed header with nav-->
+		<header data-role="header" data-position="fixed">
+			<h1 style="font-size: 1em;">Kin Sanctuary</h1>
+<nav data-role="navbar">
+	<ul>
+		<li><a href="#index" data-icon="home">Home</a></li>
+		<li><a href="#about" data-icon="heart">About Us</a></li>			
+		<li><a href="#visit" data-icon="location">Visit</a></li>
+<li><a href="https://doryjoy.org/" data-icon="home">Return to Portfolio</a></li>
+	</ul>
+		</nav>			
+			</header>
+			
+				<h2 style="border: 2px solid #5F9EA0; border-radius: 15px; font-size: 1.2em;		
+			   padding: .2em; box-shadow: 2px 2px 2px #4682B4; margin-right: 5%; margin-left: 1%;      		
+			   text-align: center; background-image: linear-gradient(to left, #EEE8AA, #008080)";>
+							Come Visit Us!</h2> 
+				  <small><p style="line-height: 2em">					
+							We offer guided tours once a day<br>
+							Monday through Friday<br> 
+							from 11:00am-12:30pm.</p></small>							
+						 <p>Schedule a visit</p>	
+						 
+<form name="sampleform" style="text-align: center; margin-left: 10%; margin-right: 35%">
+<input type="text" name="firstinput" size=20 style="text-align: center;"> 
+<small><a href="javascript:showCal('Calendar1')">Select Date</a></small>
+</form>					 
+				 				 				 
+<br>
+		<div data-role="collapsible" style="margin-left: 10%; margin-right: 20%">
+		  <h1><small>Contact Information</small></h1>			
+			<p style="text-align: center;"><small>Kin Sanctuary<br>
+												  Kaawa, Hawaii 96899<br>
+												  Phone: 808-555-9099<br>
+												  email: sanctuary@zoom.org</small></p>					  
+		</div>
+		
+			<!--iframe with map-->
+<div>
+<iframe src="map.2.png"
+		height="155" width="250" alt="Map" frameborder="2px" 
+		style="border: 2px solid #808080; border-radius: 15px;
+		margin-left: 10%;" allowfullscreen=""></iframe>	
+
+<!--iframe src="https://satellites.pro/USA_map#21.509935,-157.874737,14"-->				
+</div>
+
+	<div data-role="collapsible" data-collapsed-icon="carat-d" data-expanded-icon="carat-u">
+		<h4>More Links</h4>
+		<ul data-role="listview" data-inset="false">
+			<li><a href="#education" data-icon="home">Education</a></li>
+			<li><a href="#sponsor" data-icon="heart">Sponsorship</a></li>			
+			<li><a href="#volunteer" data-icon="location">Volunteer</a></li>
+			<li><a href="#aviary" data-icon="location">Aviary</a></li>
+		</ul>
+	</div>					
+
+				
+<br></br>	<!--fixed footer with tool-tip and auto update-->		
+<footer data-role="footer" style="text-align: center"; data-position="fixed">
+	<p style="font-size: .6em;">Copyright &copy; 2024 D.Gillikin
+	<a href="#popupInfo3" data-rel="popup" data-transition="pop" 
+	   class="my-tooltip-btn ui-btn ui-alt-icon ui-nodisc-icon ui-btn-inline ui-icon-info ui-btn-icon-notext" 
+	   title="Learn more">Learn more</a></p>
+<div data-role="popup" id="popupInfo3" class="ui-content" data-theme="a" 
+	   style="max-width:350px; font-size: .7em;">
+<script language="Javascript">
+	document.write("This page was last modified on: " + document.lastModified +"");
+</script><br>
+	 <a href="mailto:1doryjoy@gmail.com">1doryjoy@gmail.com</a>
+</footer>
+	</div>
+		</div>
+			</body>
+				
+		<!--end of third page-->		
+		<!--beginning of fourth page-->
+		
+	<head>
+<style>
+</style>
+	</head>
+			<body onload="Carousel()" >
+			
+		<div data-role="page" id="gallery" data-theme="d" 
+			style="background: url('back2.jpg') no-repeat center center fixed;
+				   background-size: cover;">
+                   
+			
+			<!--fixed header with nav-->
+		<header data-role="header" data-position="fixed">
+			<h1 style="font-size: 1em;">Kin Sanctuary</h1>
+<nav data-role="navbar">
+	<ul>
+		<li><a href="#index" data-icon="home">Home</a></li>
+		<li><a href="#about" data-icon="heart">About Us</a></li>			
+		<li><a href="#visit" data-icon="location">Visit</a></li>
+<li><a href="https://doryjoy.org/" data-icon="home">Return to Portfolio</a></li>
+	</ul>
+		</nav>			
+			</header>
+			
+
+<script type="text/javascript">
+
+/***********************************************
+* Carousel Slideshow script- (c) Ger Versluis 2003
+* Permission granted to DynamicDrive.com to feature script
+* Please keep this notice intact
+* Visit http://www.dynamicdrive.com/ for full source code
+***********************************************/
+
+/********************************************************
+	Create a div with transparent place holder in your html	
+	<div id="Carousel" style="position:relative">
+		<img src="placeholder.gif" width="404" height="202">
+	</div>
+	placeholder width:
+		 4 sided: 1.42 * carousel image width + 3
+		 6 sided: 2 * carousel image width +4
+		 8 sided: 2.62 * carousel image width + 5
+		12 sided: 3.87 * carousel image width + 7
+	placeholder height: 
+		carousel image height+2
+
+	Insert onload in body tag
+		<body onload="Carousel()">	
+*********************************************************/
+
+// 7 variables to control behavior
+	var Car_Image_Width=170;
+	var Car_Image_Height=125;
+	var Car_Border=true;		// true or false
+	var Car_Border_Color="green";
+	var Car_Speed=2;
+	var Car_Direction=true;		// true or false
+	var Car_NoOfSides=8;		// must be 4, 6, 8 or 12
+
+/* array to specify images and optional links. 
+	For 4 sided carousel specify at least 2 images
+	For 6 sided carousel specify at least 3
+	For 8 sided carousel specify at least 4
+	For 12 sided carousel specify at least 6
+ If Link is not needed keep it ""
+*/
+	Car_Image_Sources=new Array(
+		"farm2.jpg","#visit",
+		"goatWpig2.jpg","#volunteer",		
+		"farmScene1.jpg","#volunteer",				
+		"herd.jpg","#visit",		
+		"lambWcalf.jpg","#volunteer",		
+		"farmBabes.jpg","#volunteer",
+		"magnolia.jpg","#visit",
+		"chicks1.jpg","#volunteer",
+		"goatWpig1.jpg","#volunteer",
+		"sheepWbabes.jpg","#visit",
+		"bird5.jpg","#volunteer",
+		"bird3.jpg","#volunteer",
+		"goose1.jpg","#volunteer", 
+		"mangoTree.jpg","#visit",
+		"mouse.jpg","#volunteer"
+		// NOTE No comma after last line
+		);
+
+/***************** DO NOT EDIT BELOW **********************************/
+	CW_I=new Array(Car_NoOfSides/2+1);C_ClcW=new Array(Car_NoOfSides/2);
+	C_Coef=new Array(
+		3*Math.PI/2,0,3*Math.PI/2,11*Math.PI/6,Math.PI/6,3*Math.PI/2,7*Math.PI/4,	0,
+		Math.PI/4,3*Math.PI/2,5*Math.PI/3,11*Math.PI/6,0,Math.PI/6,Math.PI/3);
+	var C_CoefOf=Car_NoOfSides==4?0:Car_NoOfSides==6?2:Car_NoOfSides==8?5:9;
+	C_Pre_Img=new Array(Car_Image_Sources.length);
+	var C_Angle=Car_Direction?Math.PI/(Car_NoOfSides/2):0,C_CrImg=Car_NoOfSides,C_MaxW,C_TotalW,
+	C_Stppd=false,i,C_LeftOffset,C_HalfNo=Car_NoOfSides/2;
+
+	function Carousel(){
+		if(document.getElementById){
+			for(i=0;i<Car_Image_Sources.length;i+=2){
+				C_Pre_Img[i]=new Image();C_Pre_Img[i].src=Car_Image_Sources[i]}
+			C_MaxW=Car_Image_Width/Math.sin(Math.PI/Car_NoOfSides)+C_HalfNo+1;
+			Car_Div=document.getElementById("Carousel");
+			for(i=0;i<C_HalfNo;i++){
+				CW_I[i]=document.createElement("img");Car_Div.appendChild(CW_I[i]);	
+				CW_I[i].style.position="absolute";
+				CW_I[i].style.top=0+"px";
+				CW_I[i].style.height=Car_Image_Height+"px";
+				if(Car_Border){
+					CW_I[i].style.borderStyle="solid";
+					CW_I[i].style.borderWidth=1+"px";
+					CW_I[i].style.borderColor=Car_Border_Color}
+				CW_I[i].src=Car_Image_Sources[2*i];
+				CW_I[i].lnk=Car_Image_Sources[2*i+1];
+				CW_I[i].onclick=C_LdLnk;
+				CW_I[i].onmouseover=C_Stp;
+				CW_I[i].onmouseout=C_Rstrt}
+			CarImages()}}
+
+	function CarImages(){
+		if(!C_Stppd){
+			C_TotalW=0;
+			for(i=0;i<C_HalfNo;i++){
+				C_ClcW[i]=Math.round(Math.cos(Math.abs(C_Coef[C_CoefOf+i]+C_Angle))*Car_Image_Width);
+				C_TotalW+=C_ClcW[i]}
+			C_LeftOffset=(C_MaxW-C_TotalW)/2;
+			for(i=0;i<C_HalfNo;i++){
+				CW_I[i].style.left=C_LeftOffset+"px";
+				CW_I[i].style.width=C_ClcW[i]+"px";
+				C_LeftOffset+=C_ClcW[i]}
+			C_Angle+=Car_Speed/720*Math.PI*(Car_Direction?-1:1);
+			if((Car_Direction&&C_Angle<=0)||(!Car_Direction&&C_Angle>=Math.PI/C_HalfNo)){
+				if(C_CrImg==Car_Image_Sources.length)C_CrImg=0;
+				if(Car_Direction){
+					CW_I[C_HalfNo]=CW_I[0];
+					for(i=0;i<C_HalfNo;i++)CW_I[i]=CW_I[i+1];
+					CW_I[C_HalfNo-1].src=Car_Image_Sources[C_CrImg];
+					CW_I[C_HalfNo-1].lnk=Car_Image_Sources[C_CrImg+1]}
+				else{	for(i=C_HalfNo;i>0;i--)CW_I[i]=CW_I[i-1];
+					CW_I[0]=CW_I[C_HalfNo];
+					CW_I[0].src=Car_Image_Sources[C_CrImg];
+					CW_I[0].lnk=Car_Image_Sources[C_CrImg+1]}
+				C_Angle=Car_Direction?Math.PI/C_HalfNo:0;C_CrImg+=2}}
+		setTimeout("CarImages()",50)}
+
+	function C_LdLnk(){if(this.lnk)window.location.href=this.lnk}
+	function C_Stp(){this.style.cursor=this.lnk?"pointer":"default";C_Stppd=true;}
+	function C_Rstrt(){C_Stppd=false}
+</script>
+
+<br></br>
+<div id="Carousel" style="position:relative">
+   <img src="placeholder.gif" width="304" height="125">
+
+	 <h2 style="border: 2px solid #5F9EA0; border-radius: 15px; font-size: 1.2em; padding: .2em;		
+			    box-shadow: 2px 2px 2px #4682B4; margin-right: 5%; margin-left: 1%;     		
+			    text-align: center; background-image: linear-gradient(to left, #EEE8AA, #008080)";>
+				<a href="#animals">Meet Our Farm Family</a></h2> 			
+	
+	<div data-role="collapsible" data-collapsed-icon="carat-d" data-expanded-icon="carat-u">
+		<h4>More Links</h4>
+		<ul data-role="listview" data-inset="false">
+			<li><a href="#education" data-icon="home">Education</a></li>
+			<li><a href="#sponsor" data-icon="heart">Sponsorship</a></li>			
+			<li><a href="#volunteer" data-icon="location">Volunteer</a></li>
+			<li><a href="#aviary" data-icon="location">Aviary</a></li>
+		</ul>
+	</div>
+	
+</div>
+    	
+<br></br>	<!--fixed footer with tool-tip and auto update-->
+<footer data-role="footer" style="text-align: center"; data-position="fixed">
+	<p style="font-size: .6em;">Copyright &copy; 2024 D.Gillikin
+	<a href="#popupInfo4" data-rel="popup" data-transition="pop" 
+	   class="my-tooltip-btn ui-btn ui-alt-icon ui-nodisc-icon ui-btn-inline ui-icon-info ui-btn-icon-notext" 
+	   title="Learn more">Learn more</a></p>
+<div data-role="popup" id="popupInfo4" class="ui-content" data-theme="a" 
+	   style="max-width:350px; font-size: .7em;">
+<script language="Javascript">
+	document.write("This page was last modified on: " + document.lastModified +"");
+</script><br>
+	 <a href="mailto:1doryjoy@gmail.com">1doryjoy@gmail.com</a>
+</footer>
+	</div>
+		</div>
+			</body>
+		
+		<!--end of fourth page-->
+		<!--beginning of fifth page-->
+			
+			<body>		
+			<div data-role="page" id="getInvolved" data-theme="d">
+		
+			<!--fixed header with nav-->
+		<header data-role="header" data-position="fixed">
+			<h1 style="font-size: 1em;">Kin Sanctuary</h1>
+<nav data-role="navbar">
+	<ul>
+		<li><a href="#index" data-icon="home">Home</a></li>
+		<li><a href="#about" data-icon="heart">About Us</a></li>			
+		<li><a href="#visit" data-icon="location">Visit</a></li>
+<li><a href="https://doryjoy.org/" data-icon="home">Return to Portfolio</a></li>
+	</ul>
+		</nav>			
+			</header>
+			
+	<h2 style="border: 2px solid #5F9EA0; border-radius: 15px; font-size: 1.2em;		
+			   padding: .2em; box-shadow: 2px 2px 2px #4682B4; margin-right: 5%; margin-left: 1%;      		
+			   text-align: center; background-image: linear-gradient(to left, #EEE8AA, #008080)";>
+							Get Involved</h2> 
+		<img src="chickNhand2.jpg" alt="Get Involved" 
+		style="width: 170px; height: 110px; margin-left: 5%; 
+		border: 2px solid #808080; border-radius: 15px;">		
+
+<script>
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
+ 
+		 <p>Aloha from the Hawaiian Islands.<br>		    				 		
+		 <small>Come visit us in the lush<br>
+			  and beautiful tropical paradise<br>
+			  of Kaawa on the island of Oahu.</p></small>	
+
+			<!--panel-->
+<div data-role="article">
+		<a href="#panelArea" class="ui-btn">Learn More</a>
+</div>	
+		<div data-role="panel" id="panelArea" data-display="overlay"
+		 data-position="cover" data-swipe-close="false" data-dismissible="false">
+		 	
+	<div class="dropdown">
+
+<a href="#getInvolved" data-rel="close" style="display: inline-block; text-decoration: none; padding: 7px;
+		 font-size: .7em; border: 2px solid #BDB76B; border-radius: 15px;">Close panel</a>
+		 
+ <article data-role="content">	
+			<iframe src="chicks.mp4" alt="Goats" height="135" width="225" frameborder="2px" 
+			style="border: 2px solid #808080; border-radius: 15px;" allowfullscreen=""></iframe>	
+		</div>
+		
+		<br><!--Themed form elements nested in collapsible-->
+		<div data-role="collapsible" style="margin-left: 1%; margin-right: 2%">
+		<h1><small>Please Donate</small></h1>
+		
+			<p><small>Contributions are tax-deductible and go directly 
+					  toward ourlife-saving work. For further information, 
+					  sign up for our newsletter.</small></p> 					   	  																								  
+									
+<form method="post" action="https://webdevbasics.net/scripts/demo.php">
+	<fieldset style="background-image: linear-gradient(to left, #EEE8AA, #008080);  margin-left: 5%;
+					width: 85%;border: 1px solid #5F9EA0; border-radius: 12px; padding: .2em;">					 	
+		<label for="firstname">First Name:</label>
+		<input type="text" name="First Name" id="firstname"
+		  required="required" placeholder="first name">
+		<label for="lastname">Last Name:</label>		
+		<input type="text" name="lastname" id="lastname"
+		   required="required" placeholder="last name">
+		<label for="myAddress">Address:</label>
+		<input type="text" name="street" id="street"
+		   required="required" placeholder="Street">
+		<input type="text" name="city" id="city"
+		   required="required" placeholder="City">
+		<input type="text" name="state" id="state"
+		   required="required" placeholder="State">
+		<input type="text" name="zip" id="zip"
+		   required="required" placeholder="Zipcode">   
+	</fieldset>
+	<fieldset style="background-image: linear-gradient(to left, #EEE8AA, #008080);  margin-left: 20%;
+					width: 55%;border: 1px solid #5F9EA0; border-radius: 12px;">
+		 <input id="mySubmit" type="submit" value="Submit">
+		<button type="reset" value="Reset">Reset</button>
+	</fieldset>
+	</form>												  
+		</div>	
+				
+  <button onclick="myFunction()" class="dropbtn">Links</button>
+  <div id="myDropdown" class="dropdown-content">
+    <a href="#education">Education</a>
+    <a href="#sponsor">Sponsorship</a>
+    <a href="#volunteer">Volunteer</a>
+	<a href="#aviary">Aviary</a>
+ </div> 
+	
+	<h2 style="border: 2px solid #5F9EA0; border-radius: 15px; font-size: 1.2em;		
+			   padding: .2em; box-shadow: 2px 2px 2px #4682B4; margin-right: 5%; margin-left: 1%;      		
+			   text-align: center; background-image: linear-gradient(to left, #EEE8AA, #008080)";>
+							We appreciate your support</h2> 
+		<img src="animal7.jpg" alt="Get Involved" 
+		style="width: 100px; height: 120px; margin-left: 20%; 
+		border: 2px solid #808080; border-radius: 15px;">		
+	</div>
+		
+			<!--fixed footer with tool-tip and auto update-->
+<footer data-role="footer" style="text-align: center"; data-position="fixed">
+	<p style="font-size: .6em;">Copyright &copy; 2024 D.Gillikin
+	<a href="#popupInfo5" data-rel="popup" data-transition="pop" 
+	   class="my-tooltip-btn ui-btn ui-alt-icon ui-nodisc-icon ui-btn-inline ui-icon-info ui-btn-icon-notext" 
+	   title="Learn more">Learn more</a></p>
+<div data-role="popup" id="popupInfo5" class="ui-content" data-theme="a" 
+	   style="max-width:350px; font-size: .7em;">
+<script language="Javascript">
+	document.write("This page was last modified on: " + document.lastModified +"");
+</script><br>
+	 <a href="mailto:1doryjoy@gmail.com">1doryjoy@gmail.com</a>
+</footer>
+	</div>
+		</div>		
+			</body>			
+			
+		<!--end of fifth page-->
+		<!--beginning of sixth page-->
+		
+		<head>
+
+
+<link rel="stylesheet" href="simplegallery.css" />
+<!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>-->
+<script src="1.11.1/jquery.min.js"></script>
+
+
+<script src="jquery.touchSwipe.min.js"></script>
+<script type="text/javascript" src="simplegallery.js">
+
+/***********************************************
+* Simple Controls Gallery- (c) Dynamic Drive DHTML code library (www.dynamicdrive.com)
+* Please keep this notice intact
+* Visit Dynamic Drive at http://www.dynamicdrive.com/ for this script and 100s more
+***********************************************/
+
+</script>
+<script type="text/javascript">
+var mygallery=new simpleGallery({
+	wrapperid: "simplegallery", //ID of main gallery container,
+	dimensions: ['80%', 350], //width/height of gallery in [pixels, pixels] or ['percentage%', pixels]
+	imagearray: [
+		["animal1.jpg", "https://en.wikipedia.org/wiki/goose", "Lena &amp Babes", "Lena &amp Babes"],
+		["animal2.jpg", "https://en.wikipedia.org/wiki/rabbit", "Bethoven", "Bethoven"],
+		["animal3.jpg", "https://en.wikipedia.org/wiki/donkey","Sunny &amp Sheila", "Sunny &amp Sheila"],
+		["animal4.jpg", "https://en.wikipedia.org/wiki/pig","Charlotte", "Charlotte"],
+		["animal5.jpg", "https://en.wikipedia.org/wiki/lama","Bogie &amp Maryjane", "Bogie &amp Maryjane"],
+		["animal6.jpg", "https://en.wikipedia.org/wiki/cow","Simon", "Simon"],
+		["bird2.jpg", "https://en.wikipedia.org/wiki/cockatiel","Sufi &amp Jasmine", "Sufi &amp Jasmine"],
+		["animal8.jpg", "https://en.wikipedia.org/wiki/","Tang &amp Captain Kirk", "Tang &amp Captain Kirk"],
+		["animal9.jpg", "https://en.wikipedia.org/wiki/horse", "Ruth &amp Jupiter", "Ruth &amp Jupiter"]
+	],
+	autoplay: [true, 2000, 2], //[auto_play_boolean, delay_btw_slide_millisec, cycles_before_stopping_int]
+	persist: false,
+	scaleimage: 'both', //valid values are 'both', 'width', or 'none'
+	fadeduration: 500, //transition duration (milliseconds)
+	oninit:function(){ //event that fires when gallery has initialized/ ready to run
+	},
+	onslide:function(curslide, i){ //event that fires after each slide is shown
+		//curslide: returns DOM reference to current slide's DIV (ie: try alert(curslide.innerHTML)
+		//i: integer reflecting current image within collection being shown (0=1st image, 1=2nd etc)
+	}
+})
+</script>
+
+<style>
+#simplegallery{
+	max-width: 700px;
+}
+@media screen and (max-width: 400px) {
+	#simplegallery{
+		width: 100% !important;
+		height: 250px !important;
+	}
+}
+</style>
+	</head>
+			<body>
+			<div data-role="page" id="animals" data-theme="d">
+		
+			<!--fixed header with nav-->
+		<header data-role="header" data-position="fixed">
+			<h1 style="font-size: 1em;">Kin Sanctuary</h1>
+<nav data-role="navbar">
+	<ul>
+		<li><a href="#index" data-icon="home">Home</a></li>
+		<li><a href="#about" data-icon="heart">About Us</a></li>			
+		<li><a href="#visit" data-icon="location">Visit</a></li>
+<li><a href="https://doryjoy.org/" data-icon="home">Return to Portfolio</a></li>
+	</ul>
+		</nav>			
+			</header>
+
+<h2 style="border: 2px solid #5F9EA0; border-radius: 15px; font-size: 1.2em;		
+		   padding: .2em; box-shadow: 2px 2px 2px #4682B4; margin-right: 5%; margin-left: 1%;      		
+		   text-align: center; background-image: linear-gradient(to left, #EEE8AA, #008080)";>
+		   Our Farm Family</h2> 			
+			
+		<div id="simplegallery" class="simplegallery"></div>
+
+<div data-role="collapsible" data-collapsed-icon="carat-d" data-expanded-icon="carat-u">
+    <h4>More Links</h4>
+    <ul data-role="listview" data-inset="false">
+        <li><a href="#education" data-icon="home">Education</a></li>
+		<li><a href="#sponsor" data-icon="heart">Sponsorship</a></li>			
+		<li><a href="#volunteer" data-icon="location">Volunteer</a></li>
+		<li><a href="#aviary" data-icon="location">Aviary</a></li>
+    </ul>
+</div>		
+		
+<br></br>	<!--fixed footer with tool-tip and auto update-->		
+<footer data-role="footer" style="text-align: center"; data-position="fixed">
+	<p style="font-size: .6em;">Copyright &copy; 2024 D.Gillikin
+	<a href="#popupInfo6" data-rel="popup" data-transition="pop" 
+	   class="my-tooltip-btn ui-btn ui-alt-icon ui-nodisc-icon ui-btn-inline ui-icon-info ui-btn-icon-notext" 
+	   title="Learn more">Learn more</a></p>
+<div data-role="popup" id="popupInfo6" class="ui-content" data-theme="a" 
+	   style="max-width:350px; font-size: .7em;">
+<script language="Javascript">
+	document.write("This page was last modified on: " + document.lastModified +"");
+</script><br>
+	 <a href="mailto:1doryjoy@gmail.com">1doryjoy@gmail.com</a>
+</footer>
+	</div>
+		</div>				
+			</body>
+			
+<script> 
+var slideShow = function(container) {
+    this.images = [];
+    this.curImage = 0;
+    for (i = 0; i < container.childElementCount; i++) {
+        this.images.push(container.children[i]);
+        this.images[i].style.display = "none";
+    }
+    
+    // Handle going to to the next slide
+    var nextSlide = function() {
+        for (var i = 0; i < this.images.length; i++) {
+            this.images[i].style.display = "none";
+        }
+        this.images[this.curImage].style.display = "block";
+        this.curImage++;
+        if (this.curImage >= this.images.length) {
+            this.curImage = 0;
+        }
+        window.setTimeout(nextSlide.bind(this), 2000);
+    };   
+    nextSlide.call(this);
+	};
+	slideShow(document.getElementById("slideshow"));
+</script>					
+					
+		<!--end of sixth page-->
+		<!--beginning of seventh page-->
+		
+			<body>
+			<div data-role="page" id="education" data-theme="d">
+		
+			<!--fixed header with nav-->
+		<header data-role="header" data-position="fixed">
+			<h1 style="font-size: 1em;">Kin Sanctuary</h1>
+<nav data-role="navbar">
+	<ul>
+		<li><a href="#index" data-icon="home">Home</a></li>
+		<li><a href="#about" data-icon="heart">About Us</a></li>			
+		<li><a href="#visit" data-icon="location">Visit</a></li>
+<li><a href="https://doryjoy.org/" data-icon="home">Return to Portfolio</a></li>
+	</ul>
+		</nav>			
+			</header>
+			
+		<h2 style="border: 2px solid #5F9EA0; border-radius: 15px; font-size: 1.2em;		
+			   padding: .2em; box-shadow: 2px 2px 2px #4682B4; margin-right: 5%; margin-left: 1%;      		
+			   text-align: center; background-image: linear-gradient(to left, #EEE8AA, #008080)";>
+							Humane Education</h2>  
+		<small><p style="margin-right: 10%; margin-left: 10%;">Kin Sanctuary hosts humane education
+		 programs, school field trips, elder activities, 
+		 animal-assisted therapy for special-needs visitors 
+		 and at-risk youth, as well as farm tours for the 
+		 general public. Our programs provide the community 
+		 with a hands-on experience that is thought-provoking 
+		 and stimulates social and emotional growth.</p></small>
+		 
+			<!--second panel-->
+<div data-role="content">
+		<a href="#panelArea2" class="ui-btn">Learn More</a>
+</div>	
+		<div data-role="panel" id="panelArea2" data-display="overlay"
+		data-position="cover" data-swipe-close="false" data-dismissible="false">
+
+<a href="#education" data-rel="close" style="display: inline-block; text-decoration: none; padding: 7px;
+		 font-size: .7em; border: 2px solid #BDB76B; border-radius: 15px;">Close panel</a>
+		
+		 <p>Aloha  from the<br>
+		 Hawaiian Islands</p>
+		 
+		 <!--iframe-->
+		<iframe src="video.mp4" alt="Meadow" height="135" width="225" frameborder="2px" 
+				style="border: 2px solid #808080; border-radius: 15px;" allowfullscreen="">
+		</iframe>				
+		 		 
+		<br><!--Themed form elements nested in collapsible-->
+		<div data-role="collapsible" style="margin-left: 1%; margin-right: 2%">
+		<h1><small>Please Donate</small></h1>
+		
+			<p><small>Contributions are tax-deductible and go directly 
+					  toward ourlife-saving work. For further information, 
+					  sign up for our newsletter.</small></p> 					 												  
+									
+<form method="post" action="https://webdevbasics.net/scripts/demo.php">
+	<fieldset style="background-image: linear-gradient(to left, #EEE8AA, #008080);  margin-left: 5%;
+					width: 85%;border: 1px solid #5F9EA0; border-radius: 12px; padding: .2em;">					 	
+		<label for="firstname">First Name:</label>
+		<input type="text" name="First Name" id="firstname"
+		  required="required" placeholder="first name">
+		<label for="lastname">Last Name:</label>		
+		<input type="text" name="lastname" id="lastname"
+		   required="required" placeholder="last name">
+		<label for="myAddress">Address:</label>
+		<input type="text" name="street" id="street"
+		   required="required" placeholder="Street">
+		<input type="text" name="city" id="city"
+		   required="required" placeholder="City">
+		<input type="text" name="state" id="state"
+		   required="required" placeholder="State">
+		<input type="text" name="zip" id="zip"
+		   required="required" placeholder="Zipcode">   
+	</fieldset>
+	<fieldset style="background-image: linear-gradient(to left, #EEE8AA, #008080);  margin-left: 20%;
+					width: 55%;border: 1px solid #5F9EA0; border-radius: 12px;">
+		 <input id="mySubmit" type="submit" value="Submit">
+		<button type="reset" value="Reset">Reset</button>
+	</fieldset>
+	</form>												  
+		</div>	
+		
+		
+<!--collapsible-->
+<div data-role="collapsible" data-collapsed-icon="carat-d" data-expanded-icon="carat-u">
+    <h4>More Links</h4>
+    <ul data-role="listview" data-inset="false">
+        <li><a href="#volunteer" data-icon="home">Volunteer</a></li>
+		<li><a href="#sponsor" data-icon="heart">Sponsorship</a></li>			
+		<li><a href="#aviary" data-icon="location">Aviary</a></li>
+    </ul>
+</div>
+<h2 style="border: 2px solid #5F9EA0; border-radius: 15px; font-size: 1.2em;		
+			   padding: .2em; box-shadow: 2px 2px 2px #4682B4; margin-right: 5%; margin-left: 1%;      		
+			   text-align: center; background-image: linear-gradient(to left, #EEE8AA, #008080)";>
+							We appreciate your support</h2> 
+		<img src="birdDog.jpg" alt="Get Involved" 
+		style="width: 100px; height: 120px; margin-left: 20%; 
+		border: 2px solid #808080; border-radius: 15px;">		
+	</div>				
+		
+<br></br>		<!--fixed footer with tool-tip and auto update-->
+<footer data-role="footer" style="text-align: center"; data-position="fixed">
+	<p style="font-size: .6em;">Copyright &copy; 2024 D.Gillikin
+	<a href="#popupInfo7" data-rel="popup" data-transition="pop" 
+	   class="my-tooltip-btn ui-btn ui-alt-icon ui-nodisc-icon ui-btn-inline ui-icon-info ui-btn-icon-notext" 
+	   title="Learn more">Learn more</a></p>
+<div data-role="popup" id="popupInfo7" class="ui-content" data-theme="a" 
+	   style="max-width:350px; font-size: .7em;">
+<script language="Javascript">
+	document.write("This page was last modified on: " + document.lastModified +"");
+</script><br>
+	 <a href="mailto:1doryjoy@gmail.com">1doryjoy@gmail.com</a>
+</footer>
+	</div>
+		</div>					
+			</body>
+			
+		<!--end of seventh page-->
+		<!--beginning of eighth page-->
+		
+			<body>			
+			<div data-role="page" id="sponsor" data-theme="d">
+		
+			<!--fixed header with nav-->
+		<header data-role="header" data-position="fixed">
+			<h1 style="font-size: 1em;">Kin Sanctuary</h1>
+<nav data-role="navbar">
+	<ul>
+		<li><a href="#index" data-icon="home">Home</a></li>
+		<li><a href="#about" data-icon="heart">About Us</a></li>			
+		<li><a href="#visit" data-icon="location">Visit</a></li>
+<li><a href="https://doryjoy.org/" data-icon="home">Return to Portfolio</a></li>
+	</ul>
+		</nav>			
+			</header>
+		<article data-role="content">
+		
+		<h2 style="border: 2px solid #5F9EA0; border-radius: 15px; font-size: 1.2em;		
+			   padding: .2em; box-shadow: 2px 2px 2px #4682B4; margin-right: 5%; margin-left: 1%;      		
+			   text-align: center; background-image: linear-gradient(to left, #EEE8AA, #008080)";>
+							Become a Sponsor</h2> 
+			<p style="margin-right: 10%; margin-left: 10%;">Help us provide care for a rescued animal 
+				   and receive an “adoption” certificate with a 
+			       picture of your sponsored animal.</p>
+		<p style="margin-left: 5%">Choose a gift to receive<br>
+								   with your sponsorship.</p>	   
+			   
+			<!--collapsible set-->
+<div data-role="collapsibleset" data-theme="d" data-content-theme="d">
+    <div data-role="collapsible">
+        <h3>Cow</h3>
+    <img src="spo1.jpg" alt="Volunteer"
+		style="width: 150px; height: 90px;  
+		border: 2px solid #808080; border-radius: 15px;"/>
+    </div>
+    <div data-role="collapsible">
+        <h3>Goat &amp Kid</h3>
+    <img src="spo3.jpg" alt="Volunteer" 
+		style="width: 150px; height: 90px; margin-left: 2%; 
+		border: 2px solid #808080; border-radius: 15px;"/>
+    </div>
+    <div data-role="collapsible">
+        <h3>Two Geese</h3>
+    <img src="spo4.jpg" alt="Volunteer" 
+		style="width: 150px; height: 90px; margin-left: 2%; 
+		border: 2px solid #808080; border-radius: 15px;"/>	
+    </div>
+	<div data-role="collapsible">
+        <h3>Horse</h3>
+    <img src="spo5.jpg" alt="Volunteer"
+		style="width: 150px; height: 90px;  
+		border: 2px solid #808080; border-radius: 15px;"/>
+    </div>
+	<div data-role="collapsible">
+        <h3>Lama</h3>
+    <img src="spo6.jpg" alt="Volunteer"
+		style="width: 150px; height: 90px;  
+		border: 2px solid #808080; border-radius: 15px;"/>
+    </div>
+	<div data-role="collapsible">
+        <h3>Pig</h3>
+    <img src="spo7.jpg" alt="Volunteer"
+		style="width: 150px; height: 90px;  
+		border: 2px solid #808080; border-radius: 15px;"/>
+    </div>
+	<div data-role="collapsible">
+        <h3>Rabbit</h3>
+    <img src="spo8.jpg" alt="Volunteer"
+		style="width: 150px; height: 90px;  
+		border: 2px solid #808080; border-radius: 15px;"/>
+    </div>
+	<div data-role="collapsible">
+        <h3>Rooster</h3>
+    <img src="spo9.jpg" alt="Volunteer"
+		style="width: 150px; height: 90px;  
+		border: 2px solid #808080; border-radius: 15px;"/>
+    </div>
+</div>
+
+<!--collapsible-->
+<div data-role="collapsible" data-collapsed-icon="carat-d" data-expanded-icon="carat-u">
+    <h4>More Links</h4>
+    <ul data-role="listview" data-inset="false">
+        <li><a href="#education" data-icon="home">Education</a></li>
+		<li><a href="#volunteer" data-icon="heart">Volunteer</a></li>			
+		<li><a href="#aviary" data-icon="location">Aviary</a></li>
+    </ul>
+</div>
+				 
+<br></br>	<!--fixed footer with tool-tip and auto update-->
+<footer data-role="footer" style="text-align: center"; data-position="fixed">
+	<p style="font-size: .6em;">Copyright &copy; 2024 D.Gillikin
+	<a href="#popupInfo8" data-rel="popup" data-transition="pop" 
+	   class="my-tooltip-btn ui-btn ui-alt-icon ui-nodisc-icon ui-btn-inline ui-icon-info ui-btn-icon-notext" 
+	   title="Learn more">Learn more</a></p>
+<div data-role="popup" id="popupInfo8" class="ui-content" data-theme="a" 
+	   style="max-width:350px; font-size: .7em;">
+<script language="Javascript">
+	document.write("This page was last modified on: " + document.lastModified +"");
+</script><br>
+	 <a href="mailto:1doryjoy@gmail.com">1doryjoy@gmail.com</a>
+</footer>
+	</div>
+		</div>								
+			</body>
+			
+		<!--end of 	eighth page-->
+		<!--beginning of ninth page-->
+		
+			<body>	
+			<div data-role="page" id="volunteer" data-theme="d"
+			style="background: url('chloe.jpg') no-repeat center center fixed;
+				   background-size: cover;">
+		
+			<!--fixed header with nav-->
+		<header data-role="header" data-position="fixed">
+			<h1 style="font-size: 1em;">Kin Sanctuary</h1>
+<nav data-role="navbar">
+	<ul>
+		<li><a href="#index" data-icon="home">Home</a></li>
+		<li><a href="#about" data-icon="heart">About Us</a></li>			
+		<li><a href="#visit" data-icon="location">Visit</a></li>
+<li><a href="https://doryjoy.org/" data-icon="home">Return to Portfolio</a></li>
+	</ul>
+		</nav>			
+			</header>
+			
+	<article data-role="content">
+	
+	<p style="text-align: center;"></p>
+	<h2 style="border: 2px solid #5F9EA0; border-radius: 15px; font-size: 1.2em;		
+			   padding: .2em; box-shadow: 2px 2px 2px #4682B4; margin-right: 5%; margin-left: 1%;      		
+			   text-align: center; background-image: linear-gradient(to left, #EEE8AA, #008080)";>
+				Fun and Rewarding</h2> 
+	
+		<!--collapsible-->
+		<div data-role="collapsible" style="margin-left: 10%; margin-right: 20%">
+		<h1><small>Join Us</small></h1>			
+		<p style="text-align: center; line-height: 1.3em;">Join us on Monday and Wednesday  mornings at 9:00 a.m.
+											  to help out at the farm. Projects may include gardening, 
+											  carpentry, animal grooming, handyperson jobs, trail maintenance 
+											  and more. Your help will make a meaningful difference.</small></p>					  
+		</div>
+		
+				<img src="volunteer.jpg" alt="Volunteer" 
+		style="width: 160px; height: 100px; margin-left: 5%; 
+		border: 2px solid #808080; border-radius: 15px;"/>				   					
+		<img src="volunteer2.jpg" alt="Volunteer" 
+		style="width: 160px; height: 100px; margin-left: 5%; 
+		border: 2px solid #808080; border-radius: 15px;"/>				
+
+			<!--collapsible-->
+<div data-role="collapsible" data-collapsed-icon="carat-d" data-expanded-icon="carat-u">
+    <h4>More Links</h4>
+    <ul data-role="listview" data-inset="false">
+        <li><a href="#education" data-icon="home">Education</a></li>
+		<li><a href="#sponsor" data-icon="heart">Sponsorship</a></li>			
+		<li><a href="#aviary" data-icon="location">Aviary</a></li>
+    </ul>
+</div>
+	</article>
+	
+			<!--fixed footer with tool-tip and auto update-->
+<footer data-role="footer" style="text-align: center"; data-position="fixed">
+	<p style="font-size: .6em;">Copyright &copy; 2024 D.Gillikin
+	<a href="#popupInfo9" data-rel="popup" data-transition="pop" 
+	   class="my-tooltip-btn ui-btn ui-alt-icon ui-nodisc-icon ui-btn-inline ui-icon-info ui-btn-icon-notext" 
+	   title="Learn more">Learn more</a></p>
+<div data-role="popup" id="popupInfo9" class="ui-content" data-theme="a" 
+	   style="max-width:350px; font-size: .7em;">
+<script language="Javascript">
+	document.write("This page was last modified on: " + document.lastModified +"");
+</script><br>
+	 <a href="mailto:1doryjoy@gmail.com">1doryjoy@gmail.com</a>
+</footer>
+	</div>
+		</div>		
+			</body>
+			
+		<!--end of ninth page-->
+		<!--beginning of tenth page-->
+		
+<head>
+<style>
+		@media screen and (max-width: 400px) {
+		#simplegallery{
+		width: 100% !important;
+		height: 250px !important;
+	}
+}
+</style>
+</head>				
+			<body>		
+			<div data-role="page" id="aviary" data-theme="d"
+			style="background: url('back1.jpg') no-repeat center center fixed;
+                   background-size: cover;">
+				
+			<!--fixed header with nav-->
+		<header data-role="header" data-position="fixed">
+			<h1 style="font-size: 1em;">Kin Sanctuary</h1>
+<nav data-role="navbar">
+	<ul>
+		<li><a href="#index" data-icon="home">Home</a></li>
+		<li><a href="#about" data-icon="heart">About Us</a></li>			
+		<li><a href="#visit" data-icon="location">Visit</a></li>
+<li><a href="https://doryjoy.org/" data-icon="home">Return to Portfolio</a></li>
+	</ul>
+		</nav>			
+			</header>
+ 
+		<!--slideshow-->
+<article data-role="content">
+<div id="slideshow2"
+	 style="margin-top: -2%;">
+        <img src="bird2.jpg" alt="Parrots" 
+		style="height: 110px; width: 200px; 
+		border: 2px solid #BDB76B; border-radius: 15px; margin-top: 10px;"/>
+		<img src="bird3.jpg" alt="Sun Conures"
+		style="height: 110px; width: 200px; 
+		border: 2px solid #BDB76B; border-radius: 15px; margin-top: 10px;"/>
+		<img src="bird5.jpg" alt="Cockateil" 
+		style="height: 110px; width: 200px; 
+		border: 2px solid #BDB76B; border-radius: 15px; margin-top: 10px;"/>
+		<img src="bird6.jpg" alt="Green Cheek Conures" 
+		style="height: 110px; width: 200px; 
+		border: 2px solid #BDB76B; border-radius: 15px; margin-top: 10px;"/>		
+		<img src="bird7.jpg" alt="Yellow Sided GCC" 
+		style="height: 110px; width: 200px; 
+		border: 2px solid #BDB76B; border-radius: 15px; margin-top: 10px;"/>
+		</div>	
+</article>
+		<br></br>
+		<p style="color: #560319; font-size: 1em; text-shadow: 0.5px 0.5px 0.5px rgba(0, 0, 0, 0.2); font-weight: bold;">
+			We board birds in our spacious<br>
+		    indoor and outdoor aviarys.</p>
+		   
+		<!--collapsible-->
+<div data-role="collapsible" >
+		<h1>Healthy Homes</h1>
+		<img src="aviary1.jpg" alt="Indoor Aviary" 
+		style="width: 200px; height: 120px; 
+		border: 2px solid #808080; border-radius: 15px;"/>
+		<p>Indoor Aviary</p>
+		<img src="aviary2.jpg" alt="<p>Communal Outdoor Aviary</p>" 
+		style="width: 200px; height: 120px; 
+		border: 2px solid #808080; border-radius: 15px;"/>
+		<p>Communal Outdoor Aviary</p>
+.		<img src="aviary3.jpg" alt="<p>Private Outdoor Aviary</p>" 
+		style="width: 200px; height: 120px; 
+		border: 2px solid #808080; border-radius: 15px;"/>
+		<p>Private Outdoor Aviary</p>
+	</div>		
+
+<br></br>  <!--fixed footer with tool-tip and auto update-->
+<footer data-role="footer" style="text-align: center"; data-position="fixed">
+	<p style="font-size: .6em;">Copyright &copy; 2024 D.Gillikin
+	<a href="#popupInfo10" data-rel="popup" data-transition="pop" 
+	   class="my-tooltip-btn ui-btn ui-alt-icon ui-nodisc-icon ui-btn-inline ui-icon-info ui-btn-icon-notext" 
+	   title="Learn more">Learn more</a></p>
+<div data-role="popup" id="popupInfo10" class="ui-content" data-theme="a" 
+	   style="max-width:350px; font-size: .7em;">
+<script language="Javascript">
+	document.write("This page was last modified on: " + document.lastModified +"");
+</script><br>
+	 <a href="mailto:1doryjoy@gmail.com">1doryjoy@gmail.com</a>
+</footer>
+	</div>
+		</div>		
+			</body>
+
+<script> 
+var slideShow = function(container) {
+    this.images = [];
+    this.curImage = 0;
+    for (i = 0; i < container.childElementCount; i++) {
+        this.images.push(container.children[i]);
+        this.images[i].style.display = "none";
+    }
+    
+    // Handle going to to the next slide
+    var nextSlide = function() {
+        for (var i = 0; i < this.images.length; i++) {
+            this.images[i].style.display = "none";
+        }
+        this.images[this.curImage].style.display = "block";
+        this.curImage++;
+        if (this.curImage >= this.images.length) {
+            this.curImage = 0;
+        }
+        window.setTimeout(nextSlide.bind(this), 2000);
+    };   
+    nextSlide.call(this);
+	};
+	slideShow(document.getElementById("slideshow2"));
+</script>-->				
+			
+		<!--end of tenth page-->
+</html>
+				
+
+
+			
+
